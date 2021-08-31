@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="/images/style1.css">
+</head>
+
+<body>
+    <nav>
+        <div id="logo">
+            <img src="/images/onlinelogomaker-081621-1041-5819.png" alt="logo">
+        </div>
+        <div id="nav_item">
+            <ul>
+                <li><a href="#">CalCGPA</a></li>
+                <li><a href="#">Multiple Semester</a></li>
+                <li><a href="#">Books</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="branch">
+        <select>
+            <option>Select Branch</option>
+            <option>CSE</option>
+            <option>ECE</option>
+            <option>EEE</option>
+            <option>IT</option>
+        </select>
+    </div>
+    <div id="main">
+        <div id="item1">
+            <div>
+                <select name="subject1" id="subject1">
+                    <option value="0">Select Subject</option>
+                    <optgroup label="Semester 3">
+                        <option value="Data Structure">Data Structure</option>
+                        <option value="Database System">Database System</option>
+                        <option value="Discrete Structure">Discrete Structure</option>
+                        <option value="Microprocessor">Microprocessor</option>
+                        <option value="Economics">Economics</option>
+                    </optgroup>
+                    <optgroup label="Semester 4">
+                        <option value="Analysis and Design of Algorithm">Analysis and Design of Algorithm</option>
+                        <option value="Web Technologies">Web Technologies</option>
+                        <option value="Operating System">Operating System</option>
+                        <option value="Software Engineering">Software Engineering</option>
+                        <option value="Computer jArchitecture">Computer jArchitecture</option>
+                    </optgroup>
+                    <optgroup label="Semester 5">
+                        <option value="Data Communication and Network">Data Communication and Network</option>
+                        <option value="Computer Graphics">Computer Graphics</option>
+                        <option value="A.I.">A.I.</option>
+                        <option value="Principal of Programming Language">Principal of Programming Language</option>
+                        <option value="Theory of Computation">Theory of Computation</option>
+                    </optgroup>
+                    <optgroup label="Semester 6">
+                        <option value="Computer Network and Security">Computer Network and Security</option>
+                        <option value="Linear Algebra and Probability Theory">Linear Algebra and Probability Theory</option>
+                        <option value="Modeling and Simulation">Modeling and Simulation</option>
+                        <option value="Compiler Design">Compiler Design</option>
+                        <option value="Economics">Economics</option>
+                    </optgroup>
+                   <!-- <optgroup label="Semester 7">
+                        <option>Data Structure</option>
+                        <option>Database System</option>
+                        <option value="">Discrete Structure</option>
+                        <option value="">Microprocessor</option>
+                        <option value="">Economics</option>
+                    </optgroup>
+                    <optgroup label="Semester 7">
+                        <option>Data Structure</option>
+                        <option>Database System</option>
+                        <option value="">Discrete Structure</option>
+                        <option value="">Microprocessor</option>
+                        <option value="">Economics</option>
+                    </optgroup>-->
+                </select>
+                <div><input id="marks" type="number">
+                </div>
+            </div>
+
+            <button onclick="add()">Add Subject</button>
+        </div>
+        <div id="item2">
+            <table id="table">
+                <tr>
+                    <td>Subject</td>
+                    <td>Credit</td>
+                    <td>Goal</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+
+
+    <script>
+        function add(){
+            if(document.getElementById("subject1").value==0){
+                return;
+            }
+            let data1=document.getElementById("subject1").value;
+            let markss=document.getElementById("marks").value;
+            let row=document.createElement("tr");
+            let rowdata1=document.createElement("td");
+            let rowdata2=document.createElement("td");
+            let rowdata3=document.createElement("td");
+            rowdata1.textContent=data1;
+            rowdata2.textContent=3;
+            rowdata3.textContent=markss;
+            let toapp=document.getElementById("table");
+            row.append(rowdata1);
+            row.append(rowdata2);
+            row.append(rowdata3);
+            toapp.append(row);
+
+
+
+
+
+            
+            
+        }
+    </script>
+</body>
+
+</html>
